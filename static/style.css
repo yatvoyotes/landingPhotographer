@@ -1,0 +1,587 @@
+.menu {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    margin: 0 auto !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: white;
+    padding: 0;
+}
+
+#id_type_photoset {
+    margin: 20px 0 20px 0;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.MyH {
+    font-size: 4vh;
+    margin: 75px auto 75px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.usloviyaPhoto {
+    padding: 0 !important;
+}
+
+.usloviyaPhoto img {
+    max-width: 567px;
+    object-fit: cover;
+    float: right;
+}
+
+.usloviyaText {
+    max-width: 567px !important;
+    padding: 0 50px 0 50px !important;
+    text-align: inherit;
+    font-size: larger;
+}
+
+.uslociyaBlock {
+    margin: 50px 0 50px 0;
+}
+
+.price {
+    text-align: center;
+    background: rgba(209, 15, 255, 0.09);
+}
+
+.price img {
+    max-width: 737px;
+    margin: 30px auto 30px auto;
+}
+
+.stages {
+    background: #ededed;
+    box-shadow: 0 2px 5px 5px #f4f4f4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.stages img, i {
+    margin-top: 10%;
+    object-fit: cover;
+    width: 44px !important;
+}
+
+.stages h6 {
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin: 2% 0 2% 0;
+}
+
+.stages .text {
+    color: #999999;
+    font-size: larger;
+    line-height: 1.8;
+    font-weight: 400;
+    margin: 20px 0 0;
+    padding: 5px 0 40px 0;
+}
+
+.aboutText {
+    max-width: 567px !important;
+    margin: auto 0 auto auto;
+    padding: 4%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    box-shadow: -4px 0 0 0 dodgerblue;
+}
+
+.photoAbout img {
+    width: 345px !important;
+    object-fit: cover;
+    border-radius: 45px;
+    float: left;
+}
+
+.photoAboutFirst {
+    display: none;
+}
+
+.aboutMe {
+    margin: auto;
+    text-align: center;
+    display: inline-flex;
+}
+
+.call {
+    margin: auto;
+    text-align: center;
+    display: inline-flex;
+
+}
+
+
+.callText {
+    width: 567px !important;
+    margin: auto 0 auto auto;
+    font-weight: bold;
+    font-size: 6vh;
+    height: 800px;
+    background: #e0e5eb;
+    padding-top: 200px;
+}
+
+.buttonCall {
+    text-decoration: none;
+    font-size: 2vh;
+    color: black !important;
+    font-weight: normal;
+    background: #f5d654 !important;
+    width: 245px;
+    display: inline-block;
+    padding: 7px 25px 7px 25px;
+    border-radius: 25px;
+    margin-top: 10%;
+    position: relative;
+    border: none !important;
+
+}
+
+.photoCall {
+    padding: 0 !important;
+}
+
+.photoCall img {
+    width: 567px !important;
+    object-fit: cover;
+    float: left;
+}
+
+.menu li {
+    border-color: white; /* Цвет рамки */
+    border-style: solid;
+    border-width: medium;
+
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.menu li:hover {
+    border-color: dimgray; /* Цвет рамки */
+    border-style: solid;
+    border-width: medium;
+}
+
+.favicon {
+    width: 330px;
+    height: 165px;
+}
+
+.contacts-text {
+    width: 747px;
+    line-height: 2;
+    font-size: 1.125rem;
+    margin: 16px auto 0;
+}
+
+.contacts h6 {
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin: 2% 0 2% 0;
+}
+
+.footerRight {
+    font-weight: bold;
+    text-align: initial;
+    margin-top: 60px !important;
+    padding: 5px;
+}
+
+.footer {
+    margin-top: 2% !important;
+    background: #ededed;
+    box-shadow: 0 2px 5px 5px #f4f4f4;
+}
+
+.map {
+    float: right;
+}
+
+.map iframe {
+    float: right;
+}
+
+.footer .favicon {
+    margin-top: 40px;
+}
+
+.topMarg {
+    margin-top: 200px
+}
+
+
+#noMargin {
+    margin: 0px;
+    padding: 0px;
+}
+
+#lineStyle {
+    background-color: #fff;
+    width: 24px;
+    height: 2px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    color: yellow;
+    background-color: #493458;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.mobile {
+    padding: 0;
+    position: fixed;
+    z-index: 99999 !important;
+}
+
+.mobile__label {
+    border: solid 2px black;
+    display: inline-block;
+    overflow: hidden;
+    padding: 12px 9px;
+    width: 45px;
+    white-space: nowrap;
+}
+
+.mobile__label:hover {
+    cursor: pointer;
+}
+
+.mobile__label:hover .label__line {
+    margin-left: 0px;
+}
+
+.mobile__label:hover :nth-child(2) .label__line {
+    transition-delay: .1s;
+}
+
+.mobile__label:hover :nth-child(3) .label__line {
+    transition-delay: .2s;
+}
+
+.mobile__label__content {
+    font-size: 0;
+    line-height: 0;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.mobile__label__content:last-child {
+    margin-bottom: 0px;
+}
+
+.label__line {
+    background-color: black;
+    width: 24px;
+    height: 2px;
+    display: inline-block;
+    margin-left: -33px;
+    margin-right: 43px;
+    transition: margin-left .2s linear;
+}
+
+.mobile__input {
+    display: none;
+}
+
+.mobile__nav {
+    margin-top: 10px;
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-height 1s linear, max-width .8s linear;
+
+}
+
+.mobile__nav ul {
+    padding: 0 0 0 10px !important;
+    font-size: large;
+    font-weight: 500;
+}
+
+.nav__item {
+    white-space: nowrap;
+}
+
+.tipPhoto {
+    width: 100%;
+    color: #999999;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav__item a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 0px;
+    color: black;
+}
+
+.date {
+    width: 100%;
+    color: #999999;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.mobile__input:checked + .mobile__nav {
+    max-width: 150px;
+    max-height: 300px;
+}
+
+.input-group {
+    margin: 20px 0 20px 0;
+}
+
+.zapis h5 {
+    margin: 0;
+    color: #999999;
+}
+
+.acceptZapis {
+    width: 100%;
+    background: lightslategray;
+    color: white;
+    height: 7%;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.under{
+    text-decoration: underline dodgerblue;
+    color: dodgerblue;
+}
+#Zapisatsya {
+    width: 100%;
+    background: lightslategray;
+    color: white;
+    height: 7%;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.dropdown-menu h4 {
+    margin: 0;
+}
+
+.dropdown-menu label {
+    margin: 0 0 8px 0
+}
+
+.dropdown-menu input {
+    margin: 0 0 8px 0
+}
+
+
+
+@media screen and (max-width: 820px) {
+    .mobile {
+        display: block !important;
+    }
+
+    .footerRight {
+        margin-top: 22px !important;
+    }
+
+    .favicon {
+        margin: 0 !important;
+    }
+
+    .photoAbout {
+        display: none;
+    }
+
+    .photoAboutFirst {
+        display: block !important;
+    }
+
+    .photoAboutFirst img {
+        width: 200px !important;
+        object-fit: cover;
+        border-radius: 50px;
+        float: none !important;
+        margin-bottom: 20px;
+    }
+
+    .aboutText {
+        margin: auto;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-left: 2px solid dodgerblue;
+    }
+
+    .aboutMe {
+        padding: 0;
+        margin: auto 0 auto 0 !important;
+    }
+
+    .photoAbout {
+        padding: 0;
+    }
+
+    .photoAboutFirst {
+        padding: 0;
+    }
+
+    .photoAboutFirst img {
+        width: 200px !important;
+        object-fit: cover;
+        border-radius: 50px;
+        float: none !important;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .callText {
+        margin: auto;
+        height: 600px !important;
+        padding-top: 100px !important;
+    }
+
+    .photoCall {
+        display: none;
+    }
+
+    .menu {
+        display: none !important;
+    }
+
+    .topMarg {
+        margin: 0 !important;
+    }
+
+    .usloviyaPhoto {
+        margin: auto;
+        text-align: center;
+    }
+
+    .usloviyaPhoto img {
+        float: none !important;
+        margin: auto;
+        max-width: 367px;
+        object-fit: cover;
+    }
+
+    .usloviyaText {
+        margin: auto;
+        padding: 30px 0 30px 0 !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .mobile {
+        display: block !important;
+    }
+
+    .map {
+        display: none;
+    }
+
+    .footerRight {
+        text-align: center;
+        margin: 0 !important;
+    }
+
+    .favicon {
+        margin: 0 !important;
+    }
+
+    .aboutText {
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-left: 2px solid dodgerblue;
+    }
+
+    .aboutMe {
+        padding: 0;
+        margin: auto 0 auto 0 !important;
+    }
+
+    .photoAbout {
+        padding: 0;
+    }
+
+    .photoAboutFirst {
+        padding: 0;
+    }
+
+    .photoAboutFirst img {
+        width: 163px !important;
+        height: 163px !important;
+        object-fit: cover;
+        border-radius: 50px;
+        float: none !important;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .callText {
+        margin: auto;
+        height: 500px !important;
+        padding-top: 120px !important;
+    }
+
+    .photoCall {
+        display: none;
+    }
+
+    .menu {
+        display: none !important;
+    }
+
+    .topMarg {
+        margin: 0 !important;
+    }
+
+
+    .usloviyaPhoto {
+        margin: auto;
+        text-align: center;
+    }
+
+    .usloviyaPhoto img {
+        float: none !important;
+        margin: auto;
+        max-width: 267px;
+        object-fit: cover;
+    }
+
+    .usloviyaText {
+        margin: auto;
+        padding: 30px 0 30px 0 !important;
+        width: 100% !important;
+    }
+}

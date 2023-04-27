@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="ru">
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href=
+        "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
+<head>
+    <!-- Кодировка веб-страницы -->
+    <meta charset="utf-8">
+    <!-- Настройка viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS (jsDelivr CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap Bundle JS (jsDelivr CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>Photography</title>
+</head>
+
+<body>
+
+<div class="mobile">
+    <label class="mobile__label" for="checkbox">
+        <div class="mobile__label__content">
+            <span class="label__line"></span>
+            <span class="label__line"></span>
+        </div>
+        <div class="mobile__label__content">
+            <span class="label__line"></span>
+            <span class="label__line"></span>
+        </div>
+        <div class="mobile__label__content">
+            <span class="label__line"></span>
+            <span class="label__line"></span>
+        </div>
+    </label><!--mobile__label-->
+    <input class="mobile__input" type="checkbox" id="checkbox"/>
+    <nav class="mobile__nav">
+        <ul>
+            <li class="nav__item"><a href="#">Главная</a></li>
+            <li id="about-mobile" class="nav__item"><a href="#">Обо мне</a></li>
+            <li id="portfolio-mobile" class="nav__item"><a href="#">Портфолио</a></li>
+            <li id="stages-mobile" class="nav__item"><a href="#">Этапы работ</a></li>
+            <li id="price-mobile" class="nav__item"><a href="#">Прайс</a></li>
+            <li id="contacts-mobile" class="nav__item"><a href="#">Контакты</a></li>
+        </ul>
+    </nav><!--mobile__nav-->
+</div>
+
+<nav style="position: fixed; z-index: 99999; "
+     class="menu navbar navbar-expand-lg bg-body-tertiary container-fluid row">
+    <div class="container-fluid col-8">
+        <a href=""><img class="favicon" src="{% static 'favicon.png' %}"></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                </li>
+                <li id="about" class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page">Обо мне</a>
+                </li>
+                <li id="portfolio" class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page">Портфолио</a>
+                </li>
+                <li id="stages" class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page">Этапы работ</a>
+                </li>
+                <li id="price" class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page">Прайс</a>
+                </li>
+                <li id="contacts" class="nav-item px-2">
+                    <a class="nav-link active" aria-current="page">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div style="padding: 0;" class="main-content topMarg container-fluid mx-auto">
+    <div class="call mx-auto row">
+        <div class="callText col-sm-12 col-md-6">ФОТОГРАФ <br> ИЗ <br> ЧИТЫ <br>
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle buttonCall" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-auto-close="outside">
+                    ЗАБРОНИРОВАТЬ
+                </button>
+                <form class="dropdown-menu p-4" method="post" action="">
+                    {% csrf_token %}
+                    <h4>Оставить заявку</h4> <br>
+                    {{ form1 }}
+                    Нажимая на кнопку, Вы принимаете <span class="under">Положение</span> и <span class="under">Согласие</span> на обработку персональных данных.
+                    <button id="Zapisatsya" type="submit" class="btn btn-primary acceptZapis">ЗАПИСАТЬСЯ</button>
+                </form>
+            </div>
+        </div>
+        <div class="photoCall col-sm-12 col-md-6"><img src="{% static 'callBack.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="MyH about-click">Обо мне</div>
+
+<div style="padding: 0" class="main-content container-fluid mx-auto">
+    <div class="aboutMe container-fluid row">
+        <div class="photoAboutFirst col-md-12 col-lg-5"><img src="{% static 'aboutMe.jpg' %}" alt="">
+        </div>
+        <div class="aboutText col-md-12 col-lg-7">
+            Привет, меня зовут Анастасия! <br>
+            Я из Читы. <br>
+            <br>
+            Фотографии - это дело моей жизни. <br>
+            Я ими живу и безумно люблю все процессы, которые с ними связаны. <br>
+            <br>
+            Моя цель помочь вам грамотно подготовиться к съемке , обеспечить максимальный комфорт.
+        </div>
+        <div class="photoAbout col-md-12 col-lg-5"><img src="{% static 'aboutMe.jpg' %}" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="MyH portfolio-click">ПОРТФОЛИО</div>
+
+<div class="main-content col-sm-12 col-md-8 mx-auto " id="my_nanogallery2"></div>
+
+<div class="MyH stages-click">Этапы работ</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div style="margin: 0 0 30px auto;" class="col-sm-12 col-md-6 col-lg-2  stages">
+            <img src="{% static '1.png' %}" alt="">
+            <h6>ЗНАКОМСТВО</h6>
+            <div class="text">Чтобы наша съемка <br> прошла легко и весело, <br> нам нужно узнать друг <br> друга
+                по-больше.
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-2  stages">
+            <img src="{% static 'collection.svg' %}" alt="">
+            <h6>КОНЦЕПЦИЯ</h6>
+            <div class="text">Мы обсуждаем детали, <br> локацию, тему и образ. Вы <br> будете точно знать, какие
+                <br>
+                кадры вам нужны.
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-2  stages">
+            <img src="{% static '3.png' %}" alt="">
+            <h6>СЪЕМКА</h6>
+            <div class="text">Во время съемки я буду <br> помогать по вопросам <br> позинга и эмоций. При <br>
+                желании
+                будет смена
+                <br> образа и локации.
+            </div>
+        </div>
+
+        <div style="    margin: 0 auto 30px 0;" class="col-sm-12 col-md-6 col-lg-2  stages">
+            <img src="{% static '4.png' %}" alt="">
+            <h6>РЕЗУЛЬТАТ</h6>
+            <div class="text ">Через некоторое время, <br> согласно вашему тарифу, <br> вы получаете <br>
+                обработанные
+                фото.
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row uslociyaBlock mx-auto">
+        <div class="usloviyaPhoto col-sm-12 col-md-12 col-lg-6">
+            <img src="{% static 'usloviya.jpg' %}" alt="">
+        </div>
+        <div class="usloviyaText col-sm-12 col-md-12 col-lg-6">
+            <h2>Условия работы</h2>
+            <br>
+            Аренда фотостудии клиент оплчивает отдельно от фотосъемки.
+            <br><br>
+            Также отдельно оплачиваются услуги декоратора, стилиста и визажиста.
+            <br><br>
+            Чтобы забронировать нужную дату, клиент должен заплатить 50% от общей суммы за фотосессию. Только после
+            этого я связываюсь с человеком и обговариваю все условия.
+            <br><br>
+            Начало работы происходит в оговоренное время, поэтому клиент не должен опаздывать на фотосъемку. В противном
+            случае останется меньше времени на фотосессию.
+            <br><br>
+            При желании клиент может продлить время и оплатить дополнительные часы. Такая возможность доступна только
+            тогда, когда после данного времени есть свободный промежуток.
+
+        </div>
+    </div>
+</div>
+
+<div style="padding: 0" class="price container-fluid row mx-auto">
+    <div style="padding-top: 50px; margin-bottom: 0!important;" class="MyH price-click">Прайс</div>
+    <img src="{% static 'price.jpg' %}" alt="">
+</div>
+
+<div style="margin-bottom: 0" class="MyH">Запишитесь на фотосъемку</div>
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="container-fluid">
+        <div class="row zapis mx-auto">
+            <div class="col-sm-10 col-md-8 col-lg-4 mx-auto my-2">
+                <h5>Введите имя</h5>
+                <div class="input-group flex-nowrap">
+                    {{ form.name }}
+                </div>
+                <h5>Введите email</h5>
+                <div class="input-group flex-nowrap">
+                    {{ form.email }}
+                </div>
+                <h5>Введите телефон</h5>
+                <div class="input-group flex-nowrap">
+                    {{ form.phone }}
+                </div>
+                <h5>Выберите тип фотосессии</h5>
+                {{ form.type_photoset }}
+                <h5>Комментарий для фотографа</h5>
+                <div class="input-group flex-nowrap">
+                    {{ form.comment }}
+                </div>
+                <h5>Выберите дату записи</h5>
+                <input id="id_date" class="date input-group flex-nowrap" type="date" name="date" aria-label="date">
+                <span>{{ error }}</span>
+                <button class="acceptZapis" id="acceptZapis" type="submit">ЗАПИСАТЬСЯ</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div style="margin-bottom: 0" class="MyH contacts-click">Контакты</div>
+
+<div style="padding: 0" class="main-content contacts container-fluid row mx-auto">
+    <img class="mx-auto" style="width: 150px!important;" src="{% static 'contacts.png' %}" alt="">
+    <div class="contacts-text">"​Фотография – это способ чувствовать, касаться, любить. То, что вы поймали на <br>
+        пленку,
+        запечатлено навсегда… пленка хранит память о мелочах даже тогда,<br> когда вы все забыли"
+    </div>
+    <h6>ФОТОГРАФ <br>
+        СНЕЦКАЯ АНАСТАСИЯ</h6>
+    <div style="margin-top: 0" class="contacts-text">Запись по телефону : 8-914-356-66-49</div>
+</div>
+
+<div style="padding: 0" class="footer main-content contacts container-fluid row mx-auto">
+    <div class="col-sm-12 col-md-6 col-lg-2"><img class="favicon" src="{% static 'favicon.png' %}" alt=""></div>
+    <div class="footerRight col-sm-12 col-md-6 col-lg-4">
+        <h5>КОНТАКТЫ</h5>
+        <i class="bi bi-envelope-fill"></i> Milk1204@mail.ru <br>
+        <i class="bi bi-geo-alt-fill"></i> г. Чита, мкр. 5, д. 26, оф. 3 <br>
+        <i class="bi bi-telephone-fill"></i> +8(914)356-66-49
+    </div>
+    <div class="map col-sm-0 col-md-12 col-lg-6">
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab27102fd89f52e5f33fa98584bf132dc758082b80fa8b535561e4d817867a15a&amp;width=945&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+    jQuery(document).ready(function () {
+        jQuery("#my_nanogallery2").nanogallery2({
+            items: [
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/9_Xczt-OeZo.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/DLSSRRBkb9Q.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/gTuIqTJacG4.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/LwtJ-PL85No.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/cT6R_DT9WRM.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/Z96CTJWAoIs.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/NGjimWda76s.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/ERg2-OB-nRI.jpg"},
+                {src: "https://assets.nicepagecdn.com/2786c1b3/3157079/images/hi3i2-ytLRY.jpg"}
+            ],
+            thumbnailWidth: 470,
+            thumbnailHeight: 335,
+            thumbnailL1BorderHorizontal: 0,
+            thumbnailBorderVertical: 0
+
+        });
+    });
+
+    $("#Zapisatsya").click(function () {
+        if (!document.getElementById("id_name_back").value) {
+            alert("Имя обязательно!");
+        }
+        if (!document.getElementById("id_email_back").value) {
+            alert("Email обязателен!");
+        }
+        if (!document.getElementById("id_phone_back").value) {
+            alert("Заполните номер телефона!");
+        } else {
+            alert("Спасибо за заявку!\n" +
+                "Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.\n")
+        }
+    });
+
+
+    $("#acceptZapis").click(function () {
+        if (!document.getElementById("id_name").value) {
+            alert("Имя обязательно!");
+        }
+        if (!document.getElementById("id_phone").value) {
+            alert("Заполните номер телефона!");
+        }
+        if (!document.getElementById("id_type_photoset").value) {
+            alert("Пожалуйста выберите тип фотосессии!");
+        } else {
+            alert("Спасибо за заявку!\n" +
+                "Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.\n")
+        }
+    });
+
+    $("#about").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".about-click").offset().top + (-200) + "px"
+        }, 500);
+    });
+
+    $("#about-mobile").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".about-click").offset().top + (-50) + "px"
+        }, 500);
+    });
+
+    $("#portfolio").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".portfolio-click").offset().top + (-200) + "px"
+        }, 500);
+    });
+
+    $("#portfolio-mobile").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".portfolio-click").offset().top
+        }, 500);
+    });
+
+    $("#stages").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".stages-click").offset().top + (-200) + "px"
+        }, 500);
+    });
+
+    $("#stages-mobile").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".stages-click").offset().top
+        }, 500);
+    });
+
+    $("#price").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".price-click").offset().top + (-200) + "px"
+        }, 500);
+    });
+
+    $("#price-mobile").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".price-click").offset().top
+        }, 500);
+    });
+
+    $("#contacts").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".contacts-click").offset().top + (-200) + "px"
+        }, 500);
+    });
+
+    $("#contacts-mobile").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".contacts-click").offset().top
+        }, 500);
+
+    });
+
+</script>
